@@ -1,5 +1,5 @@
 # mutateEXE
-A fork of [Endgame's gym-malware](https://github.com/endgameinc/gym-malware) manipulate2.py.
+A fork of [Endgame's gym-malware](https://github.com/endgameinc/gym-malware) manipulate2.py for stand-alone file mutation without the machine-learning stuff.
 
 # Purpose
 I wanted to a way to mutate PE (exe) files in such a way that it will still remain functional for the purpose of testing endpoint security products, particularly the so call next-generation machine/deep learning based products.
