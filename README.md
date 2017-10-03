@@ -4,7 +4,7 @@ A fork of [Endgame's gym-malware](https://github.com/endgameinc/gym-malware) man
 # Purpose
 I wanted to a way to mutate PE (exe) files in such a way that it will still remain functional for the purpose of testing endpoint security products, particularly the so call next-generation machine/deep learning based products.
 
-# Relevant Work
+# Prior Work
 I chanced upon Dr Hyrum Anderson's [presentation @ DEF-CON - Evading next-gen AV using A.I](https://media.defcon.org/DEF%20CON%2025/DEF%20CON%2025%20presentations/DEFCON-25-Hyrum-Anderson-Evading-Next-Gen-AV-Using-AI.pdf) & within his work, the ability to mutate the PEs but maintain functionality is exactly what I was looking for.
 
 # Problems Encountered
