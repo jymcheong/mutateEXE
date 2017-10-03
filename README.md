@@ -23,7 +23,7 @@ The original [__binary_to_bytez](https://github.com/endgameinc/gym-malware/blob/
 
 It seems to be unnecessary if we only want to change sections, zero-out checksum & remove certificate within the PE. After generating the mutate files, I used a PE analysis tool to check the deltas:
 
-![](img/Screenshot 2017-10-02 16.31.23(2).png)
+![](img/comparefiles.png)
 
 # Installation
 Please follow [Endgame's gym-malware](https://github.com/endgameinc/gym-malware) instruction to get LIEF lib & Python bindings to work first. 
