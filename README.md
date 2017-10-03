@@ -12,7 +12,7 @@ I chanced upon Dr Hyrum Anderson's [presentation @ DEF-CON - Evading next-gen AV
 
 Somehow, **every EXE** I loaded into a byte-list will always fail to parse with **lief.PE.parse()** function. I tested in both OSX & Windows10 with native Bash integration.
 
-So I hacked his scripts to load via filename string, parsing sort-of work. Even after I gotten the script to parse, **ALL the rebuild PEs will end up as "brick" files which cannot be executed**. 
+So I hacked his scripts to load via filename string, parsing sort-of work. Even after I gotten the script to parse, **ALL the rebuilt PEs will end up as "brick" files which cannot be executed**. 
 
 # Work Arounds
 ## Parsing
