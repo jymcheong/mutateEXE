@@ -8,11 +8,11 @@ I wanted to a way to mutate PE (exe) files in such a way that it will still rema
 I chanced upon Dr Hyrum Anderson's [presentation @ DEF-CON - Evading next-gen AV using A.I](https://media.defcon.org/DEF%20CON%2025/DEF%20CON%2025%20presentations/DEFCON-25-Hyrum-Anderson-Evading-Next-Gen-AV-Using-AI.pdf) & within his work, the ability to mutate the PEs but maintain functionality is exactly what I was looking for.
 
 # Problems Encountered
-[LIEF](https://lief.quarkslab.com) has some [parsing issue](https://github.com/endgameinc/gym-malware/issues/1) as eluded by Dr Hyrum. Somehow, **every EXE** I loaded into a byte-list will always fail to parse with **lief.PE.parse()** function. I tested in both OSX & Windows10 with native Bash integration.
+[LIEF](https://lief.quarkslab.com) has some [parsing issue](https://github.com/endgameinc/gym-malware/issues/1) as eluded by Dr Hyrum. He shared that only some files are affected; those that are malformed to begin with, which can be common for malware samples.
 
-As Dr Hyrum responded with **his example codes without his PE modification**, the rebuilt file was also broken. He shared that only some files are affected; those that are malformed to begin with, which can be common for malware samples.
+Somehow, **every EXE** I loaded into a byte-list will always fail to parse with **lief.PE.parse()** function. I tested in both OSX & Windows10 with native Bash integration.
 
-Unfortunately in my environments (OSX & Win10 with native Bash), I wasn't able to parse any EXE files. So I went to hack the script to load via filename string, parsing sort-of work. Even after I gotten the script to parse, **ALL the rebuild PEs will end up as "brick" files which cannot be executed**. 
+So I hacked his scripts to load via filename string, parsing sort-of work. Even after I gotten the script to parse, **ALL the rebuild PEs will end up as "brick" files which cannot be executed**. 
 
 # Work Arounds
 ## Parsing
