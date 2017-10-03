@@ -16,7 +16,7 @@ So I hacked his scripts to load via filename string, parsing sort-of work. Even 
 
 # Work Arounds
 ## Parsing
-After looking at Quarkslab documentation, I realized the parse function has overloads. Changing the PE parse calls within [manipulate2.py](manipulate2.py) to lief.PE.parse(self.bytez, **name=''**) solves the parsing EXE issue. This eliminates overload function call confusion.
+After looking at [Quarkslab documentation](https://lief.quarkslab.com/doc/api/python/pe.html#parser), I realized the parse function has overloads. Changing the PE parse calls within [manipulate2.py](manipulate2.py) to lief.PE.parse(self.bytez, **name=''**) solves the parsing EXE issue. This eliminates overload function call confusion.
 
 ## PE Building
 The original [__binary_to_bytez](https://github.com/endgameinc/gym-malware/blob/c51438384323d286ceb0f6f526f24263e09b6277/gym_malware/envs/controls/manipulate2.py#L36) will always call build.build_* functions even if the various flags are false. After glancing through Quarkslab docs, it seems those functions will rebuild the various structures within the given PE. By right, nothing should happen if those functions were invoked with False as parameters. Unfortunately for unknown reasons, it breaks the rebuilt files.
