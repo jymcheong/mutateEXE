@@ -29,7 +29,7 @@ It seems to be unnecessary if we only want to change sections, zero-out checksum
 Please follow [Endgame's gym-malware](https://github.com/endgameinc/gym-malware) instruction to get LIEF lib & Python bindings to work first. 
 
 # Usage
-I highly suggest the use of Windows 10 with Bash integration for doing such development & testing. If you are mutating malicious PEs, **you should probably run ["removeInvalidPE.ps1"](removeInvalidPE.ps1) within a test Windows VM** with Powershell to delete away all the invalid executable-files
+I highly suggest the use of Windows 10 with Bash integration for doing such development & testing. If you are mutating malicious PEs, **you should probably run ["removeInvalidPE.ps1"](removeInvalidPE.ps1) within a test Windows VM** with Powershell to delete all the invalid executable-files
 
 # Observations
 * I mutated 4 Win32 GUI PEs with the mutation actions within mutate.py so far & the resultant files tend to work fine. 
