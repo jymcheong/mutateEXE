@@ -1,14 +1,13 @@
-import hashlib
+import hashlib, sys, time, glob
 import manipulate2 as manipulate
-import sys
-import time
-import glob
+
 
 def printSHA256(filename):
     with open(filename, "rb") as binfile:
         bytez = binfile.read()
     print(filename + ": " + hashlib.sha256(bytez).hexdigest())
     return bytez
+
 
 def mutateAgain(pattern):
     for f in list(glob.glob(pattern)):
