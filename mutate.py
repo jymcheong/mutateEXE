@@ -1,4 +1,4 @@
-import hashlib, sys, time, glob
+import hashlib, sys, time, glob, os
 import manipulate2 as manipulate
 
 
@@ -23,12 +23,13 @@ def mutateAgain(pattern):
 
 if(len(sys.argv) == 0):
     print("please provide a PE filename")
-
+if(not os.path.exists(sys.argv[1])):
+    print("File does not exists")
+    sys.exit(0)
 filename = sys.argv[1]
 bytez = printSHA256(filename)
 actions = ["break_optional_header_checksum",'overlay_append',\
            'section_rename','section_append']
-
 mutateAgain(filename)
 mutateAgain(filename.replace(".exe",".*.exe")) # 2 different actions per file
 # mutateAgain(filename.replace(".exe",".*.*.exe")) # 3 different actions per file
